@@ -92,9 +92,9 @@ Useful for long strings with a lot of concatenation.
 ##### Note on Compilation failure
 
 - In case of compilation failure, the typescript compiler will still generate the javascript file.  
-- To stop this, use "-noEmitOnError" option like follows.
+- To stop this, use "--noEmitOnError" option like follows.
 ```shell
-    tsc -noEmitonError helloVariables.ts
+    tsc --noEmitonError helloVariables.ts
 ```
 
 ## Step-3 : Staying in the loop
@@ -117,4 +117,32 @@ Following code snippet shows the few usages of for loops in typescript.
     for(let val of numbers){
         console.log(val);
     }
+```
+
+## Step-4 : Classes and Objects
+
+If you are coming from a languages like Java and C++.  The syntax may be quite familiar already.  So, here instead of dwelling too much on the syntax, will just jot down the important/different points.
+
+- properties are **public** if no access modifiers are specified.
+- `new` operator is used to create an object of the class.
+- `constructor` is used as the constructor's name, unlike the Class name itself like other languages.
+- `this` keyword represents the current object of the class.
+- Private properties are expected to be accessed via getters and setters.
+- Typescript provides a special get/set methods as **Accessors**.  With which private variables can be treated like public in the clients.
+- Also, there is a way to specify the private properties within the constructor **Parameter properties** itself.
+
+### Modules
+
+Usage of modules is the first step in **Code Organisation**.
+
+- Each class can be *exported* as a module and be used in a different class by *importing*.
+- A function or a variable may also be exported.
+- Keywords - **import** , **export**
+
+##### Note on Compilation failure
+
+- In case of compilation failure with the above mentioned features like Parameter properties and Accessors, the compiler may need to be set with a higher target of "ES5". 
+- To stop this, use "--target ES5" option like follows.
+```shell
+    tsc --target ES5 helloVariables.ts
 ```
