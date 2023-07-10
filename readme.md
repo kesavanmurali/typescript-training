@@ -146,3 +146,16 @@ Usage of modules is the first step in **Code Organisation**.
 ```shell
     tsc --target ES5 helloVariables.ts
 ```
+
+## Step-5: Inheritance
+
+- **Extending a class**
+    - with `extends` keyword, a class can derive the properties of another class.
+    - The constructor of the subclass should call super constructor using `super` keyword.
+- **Abstract class**
+    - A class with abstract methods, just like in Java.
+    - Wont be able to instantiate the class.  Only subclasses are allowed.
+    - `abstract` keyword can be used on class and method declaration.
+- **Interfaces**
+    - Interface represents complete abstraction.
+    - `interface` keyword needs to be used on class declaration.
